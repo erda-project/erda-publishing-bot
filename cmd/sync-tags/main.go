@@ -327,7 +327,7 @@ func main() {
 		if publishSemverTag {
 			fmt.Printf("Tagging %v as %q.\n", bh, semverTag)
 			err = createAnnotatedTag(bh, semverTag, tag.Tagger.When, dedent.Dedent(fmt.Sprintf(`
-			Kubernetes release %s
+			Erda release %s
 
 			Based on https://github.com/erda-project/erda/releases/tag/%s
 			`, name, name)))
@@ -340,7 +340,7 @@ func main() {
 		// create non-semver prefixed annotated tag
 		fmt.Printf("Tagging %v as %q.\n", bh, bName)
 		err = createAnnotatedTag(bh, bName, tag.Tagger.When, dedent.Dedent(fmt.Sprintf(`
-				Kubernetes release %s
+				Erda release %s
 
 				Based on https://github.com/erda-project/erda/releases/tag/%s
 				`, name, name)))
